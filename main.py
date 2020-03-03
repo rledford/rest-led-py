@@ -5,4 +5,4 @@ Author: Ryan Ledford [ https://github.com/rledford ]
 
 from server import server
 
-server.run()
+server.run(host='0.0.0.0')
