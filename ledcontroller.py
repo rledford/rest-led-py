@@ -46,7 +46,7 @@ class LEDController():
             self._brightness, 0, 0, 0]*num_leds
         self._running = True
         self._blink_enabled = False
-        self._blink_freq_sec = 1.0
+        self._blink_freq_sec = 0
         self._blink_phase = 0  # 0 off, 1 on
         self._next_blink_time = 0
         self._thread = threading.Thread(target=self._run, daemon=True)
@@ -129,8 +129,6 @@ class LEDController():
             self._next_blink_time = time.time() + self._blink_freq_sec
             self._blink_phase = 0
             self.on()
-            logger.info('blink - now {0} - next {1}'.format(time.time(), self._next_blink_time))
-            logger.info('blink enabled - {0}'.format(self._blink_enabled))
 
     def blink(self):
         """
