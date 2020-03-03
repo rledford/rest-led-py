@@ -13,12 +13,14 @@ DEFAULT_REST_PASSWORD = 'admindefault';
 class Settings():
     def __init__(self):
         self.num_leds = 1
-        self.rest_username = DEFAULT_REST_USERNAME;
-        self.rest_password = DEFAULT_REST_PASSWORD;
+        self.port = 5000
+        self.rest_username = DEFAULT_REST_USERNAME
+        self.rest_password = DEFAULT_REST_PASSWORD
 
     def serialize(self):
         return {
             "num_leds": self.num_leds,
+            "port": self.port,
             "rest_username": self.rest_username,
             "rest_password": self.rest_password
         }
@@ -35,6 +37,7 @@ class Settings():
         else:
             f.close()
             self.num_leds = d['num_leds']
+            self.port = d['port']
             self.rest_username = d['rest_username']
             self.rest_password = d['rest_password']
 
