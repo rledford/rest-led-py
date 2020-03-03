@@ -5,11 +5,11 @@ Author: Ryan Ledford [ https://github.com/rledford ]
 
 from random import randint
 
-red = '#C0392B'
-green = '#229954'
-blue = '#3498DB'
-yellow = '#F7DC6F'
-orange = '#E67E22'
+red = '#FF0000'
+green = '#00FF00'
+blue = '#0000FF'
+yellow = '#FFFF00'
+orange = '#FFA500'
 
 color_map = {
   'red': red,
