@@ -129,6 +129,8 @@ class LEDController():
             self._next_blink_time = time.time() + self._blink_freq_sec
             self._blink_phase = 0
             self.on()
+            logger.info('blink - now {0} - next {1}'.format(time.time(), self._next_blink_time))
+            logger.info('blink enabled - {0}'.format(self._blink_enabled))
 
     def blink(self):
         """
